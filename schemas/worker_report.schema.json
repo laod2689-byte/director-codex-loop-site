@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "changed_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tests_ran": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes_for_director": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary",
+    "changed_files",
+    "tests_ran",
+    "risks",
+    "notes_for_director"
+  ],
+  "additionalProperties": false
+}

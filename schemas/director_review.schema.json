@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "approve",
+        "changes_requested"
+      ]
+    },
+    "verdict_summary": {
+      "type": "string"
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "severity",
+          "reason",
+          "action"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "next_codex_instruction": {
+      "type": "string"
+    },
+    "done_when": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "decision",
+    "verdict_summary",
+    "issues",
+    "next_codex_instruction",
+    "done_when"
+  ],
+  "additionalProperties": false
+}

@@ -2,3 +2,4 @@
 Thumbs.db
 http.log
 http.err.log
+__pycache__/
